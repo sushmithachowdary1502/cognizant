@@ -1,0 +1,38 @@
+INTRODUCTION:
+SOLID is a collection of five object-oriented design principles that help developers write clean, maintainable.
+These principles guide programmers in designing classes and interfaces that are easy to understand, modify, and extend. By following SOLID principles, developers can reduce code complexity, improve flexibility, and create software.
+
+SOLID PRINCIPLES:
+S-Single Responsibility Principle:
+-->A class should have only one class
+Good example:
+student-stores the information
+Grades-calculates the grades
+Reports-generates the report
+According to this example,Each class has only one responsibility
+
+O-Open/closed principle:
+-->It states that open for extension and closed for modification.It means new features should be added without changing the codes
+
+Example:
+A payment system can support new payment methods such as UPI or Credit Card by creating new payment classes instead of modifying existing ones.
+
+L-Liskow Substitution Prnciple(LSP):
+-->Liskow substitution principle staes that the object of a chiled class should be able to replace with the parent class without affecting the program
+
+Example:
+If a Bird class contains a fly() method, a Penguin should not inherit from Bird because penguins cannot fly. This violates the expected behavior of the parent class.
+
+I-Interface Segreagtion Principle:
+A class should not be forced to implement methods it doesn't need.Large interfaces should be divided into smaller, more specific interfaces.
+
+Example
+Instead of a single interface containing work() and eat(), separate interfaces can be created so that a Robot class only implements work().
+
+D-Dependency Inversion Principle:
+the dependency principle staes that it should depend on the abstractions rather than the concrete implementations
+=>Both the high level and the low level should depend on the interfaces or the abstract classes.
+
+Example:
+A Computer class should depend on an InputDevice interface rather than directly depending on a Keyboard class. This allows other devices such as a Mouse or Touchscreen to be used without changing the Computer class.
+
