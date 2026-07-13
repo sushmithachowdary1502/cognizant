@@ -1,0 +1,10 @@
+using(var db = new AppDbContext())
+{
+    var student = db.Students.First();
+
+    student.Age = 22;
+    db.SaveChanges();
+
+    db.Students.Remove(student);
+    db.SaveChanges();
+}
