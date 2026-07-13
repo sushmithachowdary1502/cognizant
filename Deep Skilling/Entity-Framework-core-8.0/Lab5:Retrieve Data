@@ -1,0 +1,7 @@
+using(var db = new AppDbContext())
+{
+    foreach(var s in db.Students)
+    {
+        Console.WriteLine($"{s.Id} {s.Name} {s.Age}");
+    }
+}
