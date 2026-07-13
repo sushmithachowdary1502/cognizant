@@ -1,0 +1,25 @@
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/[controller]")]
+public class StudentController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult GetStudents()
+    {
+        var students = new[]
+        {
+            new Student { Id = 1, Name = "Rahul", Age = 20 },
+            new Student { Id = 2, Name = "Priya", Age = 21 }
+        };
+
+        return Ok(students);
+    }
+}
+
+public class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
