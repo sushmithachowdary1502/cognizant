@@ -1,0 +1,10 @@
+using(var db = new AppDbContext())
+{
+    db.Students.Add(new Student
+    {
+        Name = "Vandy",
+        Age = 20
+    });
+
+    db.SaveChanges();
+}
